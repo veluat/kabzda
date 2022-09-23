@@ -1,0 +1,82 @@
+.App {
+    display: flex;
+    width: 1000px;
+    margin: 150px 0 0 500px;
+}
+
+.buttonOn {
+    background-color: green;
+
+    height: 75px;
+    width: 150px;
+    font-size: 50px;
+    text-align: left;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.buttonOff {
+    background-color: red;
+    align-items: center;
+
+    height: 75px;
+    width: 150px;
+    font-size: 50px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+span {
+    margin: 100px 0 0 40px;
+}
+
+.buttonOnRound {
+    background-color: green;
+    width: 60px;
+    height: 50px;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.buttonVoid {
+    width: 100px;
+    margin: 15px 0 0 15px;
+}
+
+.buttonOn1 {
+
+
+    height: 75px;
+    width: 150px;
+    font-size: 50px;
+    text-align: left;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.buttonOff1 {
+
+    align-items: center;
+
+    height: 75px;
+    width: 150px;
+    font-size: 50px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.buttonOnRound1 {
+
+    width: 60px;
+    height: 50px;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+}
