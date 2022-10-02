@@ -1,37 +1,49 @@
-import React from "react";
-import App from "../../App";
+import React, {useState} from "react";
 
 type OnOffType = {
-    colorButton: boolean
+    //on: boolean
 }
 
-
 export const OnOff = (props: OnOffType) => {
-    return (
-        <>
-            {props.colorButton && <ButtonOn colorButton/>}
-            {!props.colorButton && <ButtonOff colorButton/>}
 
-        </>
+    let [on, setOn] = useState(false)
+
+    const onStyle = {
+        width: '30px',
+        height: '20px',
+        border: '1px solid black',
+        display: 'inline-block',
+        padding: '2px',
+        backgroundColor: on ? 'green' : 'white'
+    };
+    const offStyle = {
+        width: '30px',
+        height: '20px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '2px',
+        padding: '2px',
+        backgroundColor: !on ? 'red' : 'white'
+
+    };
+    const indicatorStyle = {
+        width: '10px',
+        height: '10px',
+        borderRadius: '5px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '5px',
+        backgroundColor: on ? 'green' : 'red'
+
+    };
+
+    return (
+        <div>
+            <div style={onStyle} onClick={ () => {setOn(true)} }>On</div>
+            <div style={offStyle} onClick={ () => {setOn(false)}}>Off</div>
+            <div style={indicatorStyle}></div>
+
+        </div>
     )
 }
 
-const ButtonOn = (props: OnOffType) => {
-    return (<div className='App'>
-        <div className='buttonOn'><span>ON</span></div>
-        <div className='buttonOff1'><span>OFF</span></div>
-        <div className='buttonVoid'>
-            <div className='buttonOnRound'></div>
-        </div>
-    </div>)
-}
-
-const ButtonOff = (props: OnOffType) => {
-    return (<div className='App'>
-        <div className='buttonOn1'><span>ON</span></div>
-        <div className='buttonOff'><span>OFF</span></div>
-        <div className='buttonVoid'>
-            <div className='buttonOnRound1'></div>
-        </div>
-    </div>)
-}

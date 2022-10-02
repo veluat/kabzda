@@ -3,20 +3,13 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import { OnOff } from './components/OnOff/OnOff';
 import {Rating} from "./components/Rating/Rating";
-
-
-/*function sum(a: number, b: number) {
-
-    alert(a + b)
-}*/
-
-//sum(100, 200);
-
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import { UncontrolledRating } from './components/UncontrolledRating/UncontrolledRating';
 
 function App() {
-    console.log('App rendering')
+
     return (
-        <div>
+        <div className={'App'}>
 
             {/*<PageTitle title={'This is APP component'}/>
             <PageTitle title={'Users'}/>
@@ -31,8 +24,17 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>*/}
-            <OnOff colorButton={true}/>
-            <OnOff colorButton={false}/>
+           {/* <OnOff />*/}
+            <OnOff />
+
+            <UncontrolledAccordion titleValue={'Menu'}/>
+            <Accordion titleValue={'Users'} collapsed={false}/>
+
+           {/* <UncontrolledAccordion titleValue={'Users'}/>*/}
+            <UncontrolledRating />
+            <Rating value={3}/>
+
+
 
 
         </div>
